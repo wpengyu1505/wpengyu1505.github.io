@@ -45,8 +45,10 @@ function Particle(id, mass, color, posX, posY, speedX, speedY) {
     }
     
     this.wakeUp = function() {
-        this.speedY = Math.random() * 40;
-        this.speedY = Math.random() * 40;
+        if (this.isGround) {
+            this.speedY = Math.random() * 40;
+            this.speedY = Math.random() * 40;
+        }
     }
 }
 
